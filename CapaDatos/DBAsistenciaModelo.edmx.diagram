@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fdca84b7d9ae4b828bdb9d3827af2a48" Name="Diagram1">
+        <EntityTypeShape EntityType="BDAsistenciaUsatModel.ASISTENCIA" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAsistenciaUsatModel.CONTRATO" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAsistenciaUsatModel.DETALLEHORARIO" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAsistenciaUsatModel.EMPLEADO" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAsistenciaUsatModel.HORARIO" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAsistenciaUsatModel.JUSTIFICACION" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAsistenciaUsatModel.LICENCIA" Width="1.5" PointX="6" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAsistenciaUsatModel.PERMISO" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAsistenciaUsatModel.sysdiagrams" Width="1.5" PointX="7.625" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAsistenciaUsatModel.TIPOLICENCIA" Width="1.5" PointX="3.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDAsistenciaUsatModel.USUARIO" Width="1.5" PointX="3" PointY="20" IsExpanded="true" />
+        <AssociationConnector Association="BDAsistenciaUsatModel.FK__ASISTENCIA__DNI__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="BDAsistenciaUsatModel.FK__JUSTIFICA__CODIG__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="BDAsistenciaUsatModel.FK__CONTRATO__DNI__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="BDAsistenciaUsatModel.FK__DETALLEHO__CODIG__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="BDAsistenciaUsatModel.FK__HORARIO__DNI__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="BDAsistenciaUsatModel.FK__LICENCIA__DNI__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="BDAsistenciaUsatModel.FK__PERMISO__DNI__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="BDAsistenciaUsatModel.FK__USUARIO__DNI__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="BDAsistenciaUsatModel.FK__LICENCIA__CODIGO__44FF419A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,8 +1,24 @@
-﻿Public Class FrmLogin
+﻿Imports CapaNegocio
+
+Public Class FrmLogin
+
+    Public nombre As String
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles btnIngresar.Click
 
+        Try
+            If txtUsuario.Equals("") Or txtContraseña.Equals("") Then
+                MessageBox.Show("Se requiere ingresar el nombre del Usuario y la contraseña")
+            Else
+                Dim USUARIO = New clsUsuario().Login(txtUsuario.Text, txtContraseña.Text)
+                nombre = USUARIO.EMPLEADO.NOMBRE + " " + USUARIO.EMPLEADO.APELLIDO
+                MessageBox.Show("Ingresaste " + nombre)
 
+                Me.Close()
+            End If
 
+        Catch ex As Exception
+            MessageBox.Show("Ocurrio un error:" + ex.Message)
+        End Try
 
     End Sub
 

@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BDAsistenciaUsatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ASISTENCIA">
+    <Key>
+      <PropertyRef Name="CODIGOASISTENCIA" />
+    </Key>
+    <Property Name="CODIGOASISTENCIA" Type="int" Nullable="false" />
+    <Property Name="FECHA" Type="date" Nullable="false" />
+    <Property Name="HORAENTRADA" Type="time" Precision="7" Nullable="false" />
+    <Property Name="HORASALIDA" Type="time" Precision="7" Nullable="false" />
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONTRATO">
+    <Key>
+      <PropertyRef Name="NUMEROCONTRATO" />
+    </Key>
+    <Property Name="NUMEROCONTRATO" Type="int" Nullable="false" />
+    <Property Name="FECHAINICIO" Type="date" Nullable="false" />
+    <Property Name="FECHAFIN" Type="date" Nullable="false" />
+    <Property Name="MONTO" Type="decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="VIGENCIA" Type="bit" Nullable="false" />
+    <Property Name="HORASEXTRA" Type="bit" Nullable="false" />
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DETALLEHORARIO">
+    <Key>
+      <PropertyRef Name="CODIGODETALLEHORARIO" />
+    </Key>
+    <Property Name="CODIGODETALLEHORARIO" Type="int" Nullable="false" />
+    <Property Name="CODIGOHORARIO" Type="int" Nullable="false" />
+    <Property Name="CODIGODIA" Type="tinyint" Nullable="false" />
+    <Property Name="HORAENTRADA" Type="tinyint" Nullable="false" />
+    <Property Name="HORASALIDA" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EMPLEADO">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="APELLIDO" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="SEXO" Type="bit" Nullable="false" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="CORREO" Type="varchar" MaxLength="50" />
+    <Property Name="ESTADO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HORARIO">
+    <Key>
+      <PropertyRef Name="CODIGOHORARIO" />
+    </Key>
+    <Property Name="CODIGOHORARIO" Type="int" Nullable="false" />
+    <Property Name="FECHAINICIO" Type="date" Nullable="false" />
+    <Property Name="FECHAFIN" Type="date" />
+    <Property Name="ESTADO" Type="bit" Nullable="false" />
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JUSTIFICACION">
+    <Key>
+      <PropertyRef Name="CODIGOJUSTIFICACION" />
+    </Key>
+    <Property Name="CODIGOJUSTIFICACION" Type="int" Nullable="false" />
+    <Property Name="FECHA" Type="date" Nullable="false" />
+    <Property Name="MOTIVO" Type="varchar" MaxLength="50" />
+    <Property Name="ESTADO" Type="bit" Nullable="false" />
+    <Property Name="CODIGOASISTENCIA" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LICENCIA">
+    <Key>
+      <PropertyRef Name="NUMEROLICENCIA" />
+    </Key>
+    <Property Name="NUMEROLICENCIA" Type="int" Nullable="false" />
+    <Property Name="FECHAPRESENTACION" Type="date" Nullable="false" />
+    <Property Name="FECHAINICIO" Type="date" Nullable="false" />
+    <Property Name="FECHAFIN" Type="date" Nullable="false" />
+    <Property Name="ESTADO" Type="bit" Nullable="false" />
+    <Property Name="DOCUMENTO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="CODIGOTIPOLICENCIA" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PERMISO">
+    <Key>
+      <PropertyRef Name="CODIGOPERMISO" />
+    </Key>
+    <Property Name="CODIGOPERMISO" Type="int" Nullable="false" />
+    <Property Name="FECHAPRESENTACION" Type="date" Nullable="false" />
+    <Property Name="FECHAPERMISO" Type="date" Nullable="false" />
+    <Property Name="MOTIVO" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ESTADO" Type="bit" Nullable="false" />
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TIPOLICENCIA">
+    <Key>
+      <PropertyRef Name="CODIGOTIPOLICENCIA" />
+    </Key>
+    <Property Name="CODIGOTIPOLICENCIA" Type="tinyint" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MAXDIAS" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="CODIGOUSUARIO" />
+    </Key>
+    <Property Name="CODIGOUSUARIO" Type="smallint" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="CONTRASEÑA" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ESTADO" Type="bit" Nullable="false" />
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__ASISTENCIA__DNI__2F10007B">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="1" />
+    <End Role="ASISTENCIA" Type="Self.ASISTENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLEADO">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="ASISTENCIA">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CONTRATO__DNI__267ABA7A">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="1" />
+    <End Role="CONTRATO" Type="Self.CONTRATO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLEADO">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="CONTRATO">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DETALLEHO__CODIG__2C3393D0">
+    <End Role="HORARIO" Type="Self.HORARIO" Multiplicity="1" />
+    <End Role="DETALLEHORARIO" Type="Self.DETALLEHORARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HORARIO">
+        <PropertyRef Name="CODIGOHORARIO" />
+      </Principal>
+      <Dependent Role="DETALLEHORARIO">
+        <PropertyRef Name="CODIGOHORARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HORARIO__DNI__29572725">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="1" />
+    <End Role="HORARIO" Type="Self.HORARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLEADO">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="HORARIO">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__JUSTIFICA__CODIG__31EC6D26">
+    <End Role="ASISTENCIA" Type="Self.ASISTENCIA" Multiplicity="1" />
+    <End Role="JUSTIFICACION" Type="Self.JUSTIFICACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ASISTENCIA">
+        <PropertyRef Name="CODIGOASISTENCIA" />
+      </Principal>
+      <Dependent Role="JUSTIFICACION">
+        <PropertyRef Name="CODIGOASISTENCIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LICENCIA__CODIGO__44FF419A">
+    <End Role="TIPOLICENCIA" Type="Self.TIPOLICENCIA" Multiplicity="1" />
+    <End Role="LICENCIA" Type="Self.LICENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOLICENCIA">
+        <PropertyRef Name="CODIGOTIPOLICENCIA" />
+      </Principal>
+      <Dependent Role="LICENCIA">
+        <PropertyRef Name="CODIGOTIPOLICENCIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LICENCIA__DNI__440B1D61">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="1" />
+    <End Role="LICENCIA" Type="Self.LICENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLEADO">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="LICENCIA">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PERMISO__DNI__3F466844">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="1" />
+    <End Role="PERMISO" Type="Self.PERMISO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLEADO">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="PERMISO">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USUARIO__DNI__47DBAE45">
+    <End Role="EMPLEADO" Type="Self.EMPLEADO" Multiplicity="1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EMPLEADO">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BDAsistenciaUsatModelStoreContainer">
+    <EntitySet Name="ASISTENCIA" EntityType="Self.ASISTENCIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTRATO" EntityType="Self.CONTRATO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DETALLEHORARIO" EntityType="Self.DETALLEHORARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HORARIO" EntityType="Self.HORARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JUSTIFICACION" EntityType="Self.JUSTIFICACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LICENCIA" EntityType="Self.LICENCIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERMISO" EntityType="Self.PERMISO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPOLICENCIA" EntityType="Self.TIPOLICENCIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ASISTENCIA__DNI__2F10007B" Association="Self.FK__ASISTENCIA__DNI__2F10007B">
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+      <End Role="ASISTENCIA" EntitySet="ASISTENCIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CONTRATO__DNI__267ABA7A" Association="Self.FK__CONTRATO__DNI__267ABA7A">
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+      <End Role="CONTRATO" EntitySet="CONTRATO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DETALLEHO__CODIG__2C3393D0" Association="Self.FK__DETALLEHO__CODIG__2C3393D0">
+      <End Role="HORARIO" EntitySet="HORARIO" />
+      <End Role="DETALLEHORARIO" EntitySet="DETALLEHORARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HORARIO__DNI__29572725" Association="Self.FK__HORARIO__DNI__29572725">
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+      <End Role="HORARIO" EntitySet="HORARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__JUSTIFICA__CODIG__31EC6D26" Association="Self.FK__JUSTIFICA__CODIG__31EC6D26">
+      <End Role="ASISTENCIA" EntitySet="ASISTENCIA" />
+      <End Role="JUSTIFICACION" EntitySet="JUSTIFICACION" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LICENCIA__CODIGO__44FF419A" Association="Self.FK__LICENCIA__CODIGO__44FF419A">
+      <End Role="TIPOLICENCIA" EntitySet="TIPOLICENCIA" />
+      <End Role="LICENCIA" EntitySet="LICENCIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LICENCIA__DNI__440B1D61" Association="Self.FK__LICENCIA__DNI__440B1D61">
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+      <End Role="LICENCIA" EntitySet="LICENCIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PERMISO__DNI__3F466844" Association="Self.FK__PERMISO__DNI__3F466844">
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+      <End Role="PERMISO" EntitySet="PERMISO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USUARIO__DNI__47DBAE45" Association="Self.FK__USUARIO__DNI__47DBAE45">
+      <End Role="EMPLEADO" EntitySet="EMPLEADO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

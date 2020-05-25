@@ -1,4 +1,7 @@
 ﻿Imports System.Windows.Forms
+Imports CapaNegocio
+Imports CapaPresentacion
+
 
 
 
@@ -24,6 +27,7 @@ Public Class FrmPrincipal
             Dim FileName As String = OpenFileDialog.FileName
             ' TODO: agregue código aquí para abrir el archivo.
         End If
+
 
 
     End Sub
@@ -93,7 +97,8 @@ Public Class FrmPrincipal
 
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim objLogin As New FrmLogin
-        objLogin.showDialog()
+        objLogin.ShowDialog()
+        lblNombreUsuario.Text = objLogin.nombre
 
     End Sub
 
@@ -111,7 +116,14 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Label2.Text = DateTime.Now.ToString()
+        Try
+            Label2.Text = DateTime.Now.ToString("hh:mm")
+            Label1.Text = DateTime.Now.ToString("dddd, dd MMMM yyy")
+        Catch ex As Exception
+            MessageBox.Show("Ocurrio un Error:" + ex.Message)
+        End Try
+
+
 
 
     End Sub

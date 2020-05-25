@@ -66,7 +66,7 @@ Partial Class FrmPrincipal
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.lblNombreUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -76,14 +76,12 @@ Partial Class FrmPrincipal
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.BdAsistenciaUsatDataSet1 = New CapaDatos.BDAsistenciaUsatDataSet()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
-        CType(Me.BdAsistenciaUsatDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip
@@ -343,7 +341,7 @@ Partial Class FrmPrincipal
         'StatusStrip
         '
         Me.StatusStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel, Me.ToolStripStatusLabel1})
+        Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel, Me.lblNombreUsuario})
         Me.StatusStrip.Location = New System.Drawing.Point(0, 697)
         Me.StatusStrip.Name = "StatusStrip"
         Me.StatusStrip.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
@@ -357,11 +355,11 @@ Partial Class FrmPrincipal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(62, 20)
         Me.ToolStripStatusLabel.Text = "Usuario:"
         '
-        'ToolStripStatusLabel1
+        'lblNombreUsuario
         '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(143, 20)
-        Me.ToolStripStatusLabel1.Text = "Nombre del Usuario"
+        Me.lblNombreUsuario.Name = "lblNombreUsuario"
+        Me.lblNombreUsuario.Size = New System.Drawing.Size(143, 20)
+        Me.lblNombreUsuario.Text = "Nombre del Usuario"
         '
         'ToolStripSeparator1
         '
@@ -438,24 +436,11 @@ Partial Class FrmPrincipal
         Me.ToolStripButton5.Text = "ToolStripButton5"
         Me.ToolStripButton5.ToolTipText = "btnAsistencia"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 17)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Label1"
-        '
-        'BdAsistenciaUsatDataSet1
-        '
-        Me.BdAsistenciaUsatDataSet1.DataSetName = "BDAsistenciaUsatDataSet"
-        Me.BdAsistenciaUsatDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Label2
         '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(1111, 706)
+        Me.Label2.Location = New System.Drawing.Point(1259, 702)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(51, 17)
         Me.Label2.TabIndex = 11
@@ -463,6 +448,17 @@ Partial Class FrmPrincipal
         '
         'Timer1
         '
+        Me.Timer1.Enabled = True
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(1061, 702)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(51, 17)
+        Me.Label1.TabIndex = 13
+        Me.Label1.Text = "Label1"
         '
         'FrmPrincipal
         '
@@ -470,8 +466,8 @@ Partial Class FrmPrincipal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1367, 723)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ToolStrip)
         Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.StatusStrip)
@@ -487,7 +483,6 @@ Partial Class FrmPrincipal
         Me.StatusStrip.PerformLayout()
         Me.ToolStrip.ResumeLayout(False)
         Me.ToolStrip.PerformLayout()
-        CType(Me.BdAsistenciaUsatDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -542,9 +537,8 @@ Partial Class FrmPrincipal
     Friend WithEvents ToolStripButton2 As ToolStripButton
     Friend WithEvents ToolStripButton4 As ToolStripButton
     Friend WithEvents ToolStripButton5 As ToolStripButton
-    Friend WithEvents Label1 As Label
-    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
-    Friend WithEvents BdAsistenciaUsatDataSet1 As CapaDatos.BDAsistenciaUsatDataSet
+    Friend WithEvents lblNombreUsuario As ToolStripStatusLabel
     Friend WithEvents Label2 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents Label1 As Label
 End Class

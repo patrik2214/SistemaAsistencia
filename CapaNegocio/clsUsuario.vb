@@ -1,13 +1,16 @@
-﻿Imports CapaDatos.BDAsistenciaUsatDataSet
-Imports CapaDatos.BDAsistenciaUsatDataSetTableAdapters
+﻿Imports CapaDatos
 
 
 Public Class clsUsuario
-    Inherits USUARIOTableAdapter
 
-    Public Function Login(nombre As String, contraseña As String) As USUARIORow
+    Private DB As BDAsistenciaUsatEntities = New BDAsistenciaUsatEntities()
+
+
+    Public Function Login(nombre As String, contraseña As String) As USUARIO
+
         Try
-            Dim Usuario = MyBase.Login(nombre, contraseña)
+
+            Dim Usuario = From u In DB.USUARIO Where u.Nombre Is nombre And u.contraseña Is contraseña Select u
             Return Usuario.Single()
 
         Catch ex As Exception

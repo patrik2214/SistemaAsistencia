@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BDAsistenciaUsatModelStoreContainer" CdmEntityContainer="BDAsistenciaUsatEntities">
+    <EntitySetMapping Name="ASISTENCIA">
+      <EntityTypeMapping TypeName="BDAsistenciaUsatModel.ASISTENCIA">
+        <MappingFragment StoreEntitySet="ASISTENCIA">
+          <ScalarProperty Name="CODIGOASISTENCIA" ColumnName="CODIGOASISTENCIA" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="HORAENTRADA" ColumnName="HORAENTRADA" />
+          <ScalarProperty Name="HORASALIDA" ColumnName="HORASALIDA" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTRATO">
+      <EntityTypeMapping TypeName="BDAsistenciaUsatModel.CONTRATO">
+        <MappingFragment StoreEntitySet="CONTRATO">
+          <ScalarProperty Name="NUMEROCONTRATO" ColumnName="NUMEROCONTRATO" />
+          <ScalarProperty Name="FECHAINICIO" ColumnName="FECHAINICIO" />
+          <ScalarProperty Name="FECHAFIN" ColumnName="FECHAFIN" />
+          <ScalarProperty Name="MONTO" ColumnName="MONTO" />
+          <ScalarProperty Name="VIGENCIA" ColumnName="VIGENCIA" />
+          <ScalarProperty Name="HORASEXTRA" ColumnName="HORASEXTRA" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLEHORARIO">
+      <EntityTypeMapping TypeName="BDAsistenciaUsatModel.DETALLEHORARIO">
+        <MappingFragment StoreEntitySet="DETALLEHORARIO">
+          <ScalarProperty Name="CODIGODETALLEHORARIO" ColumnName="CODIGODETALLEHORARIO" />
+          <ScalarProperty Name="CODIGOHORARIO" ColumnName="CODIGOHORARIO" />
+          <ScalarProperty Name="CODIGODIA" ColumnName="CODIGODIA" />
+          <ScalarProperty Name="HORAENTRADA" ColumnName="HORAENTRADA" />
+          <ScalarProperty Name="HORASALIDA" ColumnName="HORASALIDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLEADO">
+      <EntityTypeMapping TypeName="BDAsistenciaUsatModel.EMPLEADO">
+        <MappingFragment StoreEntitySet="EMPLEADO">
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HORARIO">
+      <EntityTypeMapping TypeName="BDAsistenciaUsatModel.HORARIO">
+        <MappingFragment StoreEntitySet="HORARIO">
+          <ScalarProperty Name="CODIGOHORARIO" ColumnName="CODIGOHORARIO" />
+          <ScalarProperty Name="FECHAINICIO" ColumnName="FECHAINICIO" />
+          <ScalarProperty Name="FECHAFIN" ColumnName="FECHAFIN" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JUSTIFICACION">
+      <EntityTypeMapping TypeName="BDAsistenciaUsatModel.JUSTIFICACION">
+        <MappingFragment StoreEntitySet="JUSTIFICACION">
+          <ScalarProperty Name="CODIGOJUSTIFICACION" ColumnName="CODIGOJUSTIFICACION" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="MOTIVO" ColumnName="MOTIVO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CODIGOASISTENCIA" ColumnName="CODIGOASISTENCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LICENCIA">
+      <EntityTypeMapping TypeName="BDAsistenciaUsatModel.LICENCIA">
+        <MappingFragment StoreEntitySet="LICENCIA">
+          <ScalarProperty Name="NUMEROLICENCIA" ColumnName="NUMEROLICENCIA" />
+          <ScalarProperty Name="FECHAPRESENTACION" ColumnName="FECHAPRESENTACION" />
+          <ScalarProperty Name="FECHAINICIO" ColumnName="FECHAINICIO" />
+          <ScalarProperty Name="FECHAFIN" ColumnName="FECHAFIN" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="CODIGOTIPOLICENCIA" ColumnName="CODIGOTIPOLICENCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERMISO">
+      <EntityTypeMapping TypeName="BDAsistenciaUsatModel.PERMISO">
+        <MappingFragment StoreEntitySet="PERMISO">
+          <ScalarProperty Name="CODIGOPERMISO" ColumnName="CODIGOPERMISO" />
+          <ScalarProperty Name="FECHAPRESENTACION" ColumnName="FECHAPRESENTACION" />
+          <ScalarProperty Name="FECHAPERMISO" ColumnName="FECHAPERMISO" />
+          <ScalarProperty Name="MOTIVO" ColumnName="MOTIVO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BDAsistenciaUsatModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPOLICENCIA">
+      <EntityTypeMapping TypeName="BDAsistenciaUsatModel.TIPOLICENCIA">
+        <MappingFragment StoreEntitySet="TIPOLICENCIA">
+          <ScalarProperty Name="CODIGOTIPOLICENCIA" ColumnName="CODIGOTIPOLICENCIA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="MAXDIAS" ColumnName="MAXDIAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="BDAsistenciaUsatModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="CODIGOUSUARIO" ColumnName="CODIGOUSUARIO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CONTRASEÑA" ColumnName="CONTRASEÑA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
