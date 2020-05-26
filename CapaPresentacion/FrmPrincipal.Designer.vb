@@ -79,6 +79,7 @@ Partial Class FrmPrincipal
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
@@ -99,141 +100,149 @@ Partial Class FrmPrincipal
         'MantenimientoToolStripMenuItem
         '
         Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TipoLicenciaToolStripMenuItem, Me.ParámetrosToolStripMenuItem, Me.ToolStripMenuItem1, Me.CerrarSesiónToolStripMenuItem})
+        Me.MantenimientoToolStripMenuItem.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
-        Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(124, 24)
+        Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(134, 24)
         Me.MantenimientoToolStripMenuItem.Text = "Mantenimiento"
         '
         'TipoLicenciaToolStripMenuItem
         '
+        Me.TipoLicenciaToolStripMenuItem.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TipoLicenciaToolStripMenuItem.Name = "TipoLicenciaToolStripMenuItem"
-        Me.TipoLicenciaToolStripMenuItem.Size = New System.Drawing.Size(179, 26)
+        Me.TipoLicenciaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.TipoLicenciaToolStripMenuItem.Text = "Tipo Licencia"
         '
         'ParámetrosToolStripMenuItem
         '
+        Me.ParámetrosToolStripMenuItem.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ParámetrosToolStripMenuItem.Name = "ParámetrosToolStripMenuItem"
-        Me.ParámetrosToolStripMenuItem.Size = New System.Drawing.Size(179, 26)
+        Me.ParámetrosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ParámetrosToolStripMenuItem.Text = "Parámetros"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(176, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(221, 6)
         '
         'CerrarSesiónToolStripMenuItem
         '
+        Me.CerrarSesiónToolStripMenuItem.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(179, 26)
+        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar sesión"
         '
         'OperacionesToolStripMenuItem
         '
         Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GestionarEmpleadoToolStripMenuItem, Me.ContratosToolStripMenuItem, Me.ToolStripMenuItem2, Me.HorariosToolStripMenuItem, Me.ToolStripMenuItem3, Me.UsuariosToolStripMenuItem})
+        Me.OperacionesToolStripMenuItem.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
-        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(91, 24)
+        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(97, 24)
         Me.OperacionesToolStripMenuItem.Text = "Empleado"
         '
         'GestionarEmpleadoToolStripMenuItem
         '
         Me.GestionarEmpleadoToolStripMenuItem.Name = "GestionarEmpleadoToolStripMenuItem"
-        Me.GestionarEmpleadoToolStripMenuItem.Size = New System.Drawing.Size(227, 26)
+        Me.GestionarEmpleadoToolStripMenuItem.Size = New System.Drawing.Size(241, 26)
         Me.GestionarEmpleadoToolStripMenuItem.Text = "Gestionar Empleado"
         '
         'ContratosToolStripMenuItem
         '
         Me.ContratosToolStripMenuItem.Name = "ContratosToolStripMenuItem"
-        Me.ContratosToolStripMenuItem.Size = New System.Drawing.Size(227, 26)
+        Me.ContratosToolStripMenuItem.Size = New System.Drawing.Size(241, 26)
         Me.ContratosToolStripMenuItem.Text = "Contratos"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(224, 6)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(238, 6)
         '
         'HorariosToolStripMenuItem
         '
         Me.HorariosToolStripMenuItem.Name = "HorariosToolStripMenuItem"
-        Me.HorariosToolStripMenuItem.Size = New System.Drawing.Size(227, 26)
+        Me.HorariosToolStripMenuItem.Size = New System.Drawing.Size(241, 26)
         Me.HorariosToolStripMenuItem.Text = "Horarios"
         '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(224, 6)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(238, 6)
         '
         'UsuariosToolStripMenuItem
         '
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(227, 26)
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(241, 26)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'OperacionesToolStripMenuItem1
         '
         Me.OperacionesToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AsistenciasToolStripMenuItem, Me.JustificacionesToolStripMenuItem, Me.PermisosToolStripMenuItem, Me.LicenciasToolStripMenuItem})
+        Me.OperacionesToolStripMenuItem1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.OperacionesToolStripMenuItem1.Name = "OperacionesToolStripMenuItem1"
-        Me.OperacionesToolStripMenuItem1.Size = New System.Drawing.Size(106, 24)
+        Me.OperacionesToolStripMenuItem1.Size = New System.Drawing.Size(119, 24)
         Me.OperacionesToolStripMenuItem1.Text = "Operaciones"
         '
         'AsistenciasToolStripMenuItem
         '
         Me.AsistenciasToolStripMenuItem.Name = "AsistenciasToolStripMenuItem"
-        Me.AsistenciasToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.AsistenciasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.AsistenciasToolStripMenuItem.Text = "Asistencias"
         '
         'JustificacionesToolStripMenuItem
         '
         Me.JustificacionesToolStripMenuItem.Name = "JustificacionesToolStripMenuItem"
-        Me.JustificacionesToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.JustificacionesToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.JustificacionesToolStripMenuItem.Text = "Justificaciones"
         '
         'PermisosToolStripMenuItem
         '
         Me.PermisosToolStripMenuItem.Name = "PermisosToolStripMenuItem"
-        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.PermisosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PermisosToolStripMenuItem.Text = "Permisos"
         '
         'LicenciasToolStripMenuItem
         '
         Me.LicenciasToolStripMenuItem.Name = "LicenciasToolStripMenuItem"
-        Me.LicenciasToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.LicenciasToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.LicenciasToolStripMenuItem.Text = "Licencias"
         '
         'ConsultasYReportesToolStripMenuItem
         '
         Me.ConsultasYReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConsultaAsistenciaToolStripMenuItem, Me.ConsolidadoDeAsistenciaMensualToolStripMenuItem, Me.ReporteDeFaltasYTardanzasToolStripMenuItem, Me.ReporteDeLicenciasToolStripMenuItem})
+        Me.ConsultasYReportesToolStripMenuItem.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConsultasYReportesToolStripMenuItem.Name = "ConsultasYReportesToolStripMenuItem"
-        Me.ConsultasYReportesToolStripMenuItem.Size = New System.Drawing.Size(160, 24)
+        Me.ConsultasYReportesToolStripMenuItem.Size = New System.Drawing.Size(174, 24)
         Me.ConsultasYReportesToolStripMenuItem.Text = "Consultas y Reportes"
         '
         'ConsultaAsistenciaToolStripMenuItem
         '
         Me.ConsultaAsistenciaToolStripMenuItem.Name = "ConsultaAsistenciaToolStripMenuItem"
-        Me.ConsultaAsistenciaToolStripMenuItem.Size = New System.Drawing.Size(324, 26)
+        Me.ConsultaAsistenciaToolStripMenuItem.Size = New System.Drawing.Size(349, 26)
         Me.ConsultaAsistenciaToolStripMenuItem.Text = "Consulta asistencia"
         '
         'ConsolidadoDeAsistenciaMensualToolStripMenuItem
         '
         Me.ConsolidadoDeAsistenciaMensualToolStripMenuItem.Name = "ConsolidadoDeAsistenciaMensualToolStripMenuItem"
-        Me.ConsolidadoDeAsistenciaMensualToolStripMenuItem.Size = New System.Drawing.Size(324, 26)
+        Me.ConsolidadoDeAsistenciaMensualToolStripMenuItem.Size = New System.Drawing.Size(349, 26)
         Me.ConsolidadoDeAsistenciaMensualToolStripMenuItem.Text = "Consolidado de asistencia mensual"
         '
         'ReporteDeFaltasYTardanzasToolStripMenuItem
         '
         Me.ReporteDeFaltasYTardanzasToolStripMenuItem.Name = "ReporteDeFaltasYTardanzasToolStripMenuItem"
-        Me.ReporteDeFaltasYTardanzasToolStripMenuItem.Size = New System.Drawing.Size(324, 26)
+        Me.ReporteDeFaltasYTardanzasToolStripMenuItem.Size = New System.Drawing.Size(349, 26)
         Me.ReporteDeFaltasYTardanzasToolStripMenuItem.Text = "Reporte de faltas y tardanzas"
         '
         'ReporteDeLicenciasToolStripMenuItem
         '
         Me.ReporteDeLicenciasToolStripMenuItem.Name = "ReporteDeLicenciasToolStripMenuItem"
-        Me.ReporteDeLicenciasToolStripMenuItem.Size = New System.Drawing.Size(324, 26)
+        Me.ReporteDeLicenciasToolStripMenuItem.Size = New System.Drawing.Size(349, 26)
         Me.ReporteDeLicenciasToolStripMenuItem.Text = "Reporte de Licencias"
         '
         'ViewMenu
         '
         Me.ViewMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolBarToolStripMenuItem, Me.StatusBarToolStripMenuItem})
+        Me.ViewMenu.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ViewMenu.Name = "ViewMenu"
-        Me.ViewMenu.Size = New System.Drawing.Size(44, 24)
+        Me.ViewMenu.Size = New System.Drawing.Size(49, 24)
         Me.ViewMenu.Text = "&Ver"
         '
         'ToolBarToolStripMenuItem
@@ -242,7 +251,7 @@ Partial Class FrmPrincipal
         Me.ToolBarToolStripMenuItem.CheckOnClick = True
         Me.ToolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ToolBarToolStripMenuItem.Name = "ToolBarToolStripMenuItem"
-        Me.ToolBarToolStripMenuItem.Size = New System.Drawing.Size(238, 26)
+        Me.ToolBarToolStripMenuItem.Size = New System.Drawing.Size(254, 26)
         Me.ToolBarToolStripMenuItem.Text = "&Barra de herramientas"
         '
         'StatusBarToolStripMenuItem
@@ -251,64 +260,66 @@ Partial Class FrmPrincipal
         Me.StatusBarToolStripMenuItem.CheckOnClick = True
         Me.StatusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.StatusBarToolStripMenuItem.Name = "StatusBarToolStripMenuItem"
-        Me.StatusBarToolStripMenuItem.Size = New System.Drawing.Size(238, 26)
+        Me.StatusBarToolStripMenuItem.Size = New System.Drawing.Size(254, 26)
         Me.StatusBarToolStripMenuItem.Text = "&Barra de estado"
         '
         'WindowsMenu
         '
         Me.WindowsMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewWindowToolStripMenuItem, Me.CascadeToolStripMenuItem, Me.TileVerticalToolStripMenuItem, Me.TileHorizontalToolStripMenuItem, Me.CloseAllToolStripMenuItem, Me.ArrangeIconsToolStripMenuItem})
+        Me.WindowsMenu.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.WindowsMenu.Name = "WindowsMenu"
-        Me.WindowsMenu.Size = New System.Drawing.Size(82, 24)
+        Me.WindowsMenu.Size = New System.Drawing.Size(93, 24)
         Me.WindowsMenu.Text = "&Ventanas"
         '
         'NewWindowToolStripMenuItem
         '
         Me.NewWindowToolStripMenuItem.Name = "NewWindowToolStripMenuItem"
-        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
+        Me.NewWindowToolStripMenuItem.Size = New System.Drawing.Size(230, 26)
         Me.NewWindowToolStripMenuItem.Text = "&Nueva ventana"
         '
         'CascadeToolStripMenuItem
         '
         Me.CascadeToolStripMenuItem.Name = "CascadeToolStripMenuItem"
-        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
+        Me.CascadeToolStripMenuItem.Size = New System.Drawing.Size(230, 26)
         Me.CascadeToolStripMenuItem.Text = "&Cascada"
         '
         'TileVerticalToolStripMenuItem
         '
         Me.TileVerticalToolStripMenuItem.Name = "TileVerticalToolStripMenuItem"
-        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
+        Me.TileVerticalToolStripMenuItem.Size = New System.Drawing.Size(230, 26)
         Me.TileVerticalToolStripMenuItem.Text = "Mosaico &vertical"
         '
         'TileHorizontalToolStripMenuItem
         '
         Me.TileHorizontalToolStripMenuItem.Name = "TileHorizontalToolStripMenuItem"
-        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
+        Me.TileHorizontalToolStripMenuItem.Size = New System.Drawing.Size(230, 26)
         Me.TileHorizontalToolStripMenuItem.Text = "Mosaico &horizontal"
         '
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(230, 26)
         Me.CloseAllToolStripMenuItem.Text = "C&errar todo"
         '
         'ArrangeIconsToolStripMenuItem
         '
         Me.ArrangeIconsToolStripMenuItem.Name = "ArrangeIconsToolStripMenuItem"
-        Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(219, 26)
+        Me.ArrangeIconsToolStripMenuItem.Size = New System.Drawing.Size(230, 26)
         Me.ArrangeIconsToolStripMenuItem.Text = "&Organizar iconos"
         '
         'HelpMenu
         '
         Me.HelpMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContentsToolStripMenuItem, Me.IndexToolStripMenuItem, Me.SearchToolStripMenuItem, Me.ToolStripSeparator8, Me.AboutToolStripMenuItem})
+        Me.HelpMenu.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HelpMenu.Name = "HelpMenu"
-        Me.HelpMenu.Size = New System.Drawing.Size(65, 24)
+        Me.HelpMenu.Size = New System.Drawing.Size(71, 24)
         Me.HelpMenu.Text = "Ay&uda"
         '
         'ContentsToolStripMenuItem
         '
         Me.ContentsToolStripMenuItem.Name = "ContentsToolStripMenuItem"
         Me.ContentsToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F1), System.Windows.Forms.Keys)
-        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(218, 26)
+        Me.ContentsToolStripMenuItem.Size = New System.Drawing.Size(228, 26)
         Me.ContentsToolStripMenuItem.Text = "&Contenido"
         '
         'IndexToolStripMenuItem
@@ -316,7 +327,7 @@ Partial Class FrmPrincipal
         Me.IndexToolStripMenuItem.Image = CType(resources.GetObject("IndexToolStripMenuItem.Image"), System.Drawing.Image)
         Me.IndexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.IndexToolStripMenuItem.Name = "IndexToolStripMenuItem"
-        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(218, 26)
+        Me.IndexToolStripMenuItem.Size = New System.Drawing.Size(228, 26)
         Me.IndexToolStripMenuItem.Text = "&Índice"
         '
         'SearchToolStripMenuItem
@@ -324,18 +335,18 @@ Partial Class FrmPrincipal
         Me.SearchToolStripMenuItem.Image = CType(resources.GetObject("SearchToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SearchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
         Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
-        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(218, 26)
+        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(228, 26)
         Me.SearchToolStripMenuItem.Text = "&Buscar"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(215, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(225, 6)
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(218, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(228, 26)
         Me.AboutToolStripMenuItem.Text = "&Acerca de..."
         '
         'StatusStrip
@@ -351,14 +362,16 @@ Partial Class FrmPrincipal
         '
         'ToolStripStatusLabel
         '
+        Me.ToolStripStatusLabel.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
-        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(62, 20)
+        Me.ToolStripStatusLabel.Size = New System.Drawing.Size(67, 20)
         Me.ToolStripStatusLabel.Text = "Usuario:"
         '
         'lblNombreUsuario
         '
+        Me.lblNombreUsuario.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNombreUsuario.Name = "lblNombreUsuario"
-        Me.lblNombreUsuario.Size = New System.Drawing.Size(143, 20)
+        Me.lblNombreUsuario.Size = New System.Drawing.Size(153, 20)
         Me.lblNombreUsuario.Text = "Nombre del Usuario"
         '
         'ToolStripSeparator1
@@ -440,9 +453,10 @@ Partial Class FrmPrincipal
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(1259, 702)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 17)
+        Me.Label2.Size = New System.Drawing.Size(55, 19)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Label2"
         '
@@ -454,11 +468,20 @@ Partial Class FrmPrincipal
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(1061, 702)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 17)
+        Me.Label1.Size = New System.Drawing.Size(55, 19)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Label1"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Panel1.Location = New System.Drawing.Point(0, 67)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1367, 627)
+        Me.Panel1.TabIndex = 15
         '
         'FrmPrincipal
         '
@@ -466,6 +489,7 @@ Partial Class FrmPrincipal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1367, 723)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ToolStrip)
@@ -476,6 +500,7 @@ Partial Class FrmPrincipal
         Me.MainMenuStrip = Me.MenuStrip
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FrmPrincipal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = ".:SISTEMA DE ASISTENCIA 2020:."
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
@@ -541,4 +566,5 @@ Partial Class FrmPrincipal
     Friend WithEvents Label2 As Label
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel1 As Panel
 End Class

@@ -45,9 +45,9 @@ Partial Class FrmLogin
         Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.Panel3.Controls.Add(Me.btnMinimizar)
         Me.Panel3.Controls.Add(Me.btnCerrar)
-        Me.Panel3.Location = New System.Drawing.Point(2, 0)
+        Me.Panel3.Location = New System.Drawing.Point(2, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(546, 48)
+        Me.Panel3.Size = New System.Drawing.Size(543, 46)
         Me.Panel3.TabIndex = 6
         '
         'btnMinimizar
@@ -152,9 +152,9 @@ Partial Class FrmLogin
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.txtContraseña)
         Me.Panel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.Panel1.Location = New System.Drawing.Point(2, 0)
+        Me.Panel1.Location = New System.Drawing.Point(2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(546, 727)
+        Me.Panel1.Size = New System.Drawing.Size(543, 725)
         Me.Panel1.TabIndex = 5
         '
         'lblOlvidarContraseña
@@ -184,6 +184,7 @@ Partial Class FrmLogin
         Me.Name = "FrmLogin"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = ".:Asistencia-USAT:."
         Me.Panel3.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -127,4 +127,9 @@ Public Class FrmPrincipal
 
 
     End Sub
+
+    Private Sub GestionarEmpleadoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionarEmpleadoToolStripMenuItem.Click
+        Dim objEmpleado = New FrmEmpleado
+        objEmpleado.ShowDialog()
+    End Sub
 End Class
